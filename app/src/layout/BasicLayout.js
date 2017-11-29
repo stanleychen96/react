@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout, Card, Menu, Icon } from 'antd';
+import { Link } from 'dva/router';
 // import { connect } from 'dva';
 // import { ContainerQuery } from 'react-container-query';
 
@@ -7,7 +8,6 @@ import styles from './BasicLayout.less';
 
 const { Header, Sider, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 
 // const query = {
@@ -32,20 +32,31 @@ const MenuItemGroup = Menu.ItemGroup;
 // };
 
 class BasicLayout extends React.PureComponent {
-
+  state = {
+    collapsed: false,
+  }
+  toggleCollapsed = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
   render() {
     const layout = (
       <Layout>
         <Sider
           trigger={null}
+          collapsible
+          collapsed={this.state.collapsed}
           breakpoint="md"
-          className
+          onCollapse={this.onCollapse}
           width={256}
-          OnCollapse
+          className={styles.sider}
         >
           <div className={styles.logo}>
-            <img src="https://gw.alipayobjects.com/zos/rmsportal/iwWyPinUoseUxIAeElSx.svg" alt="logo" />
-            <h1>Ant Design Pro</h1>
+            <Link to="/">
+              <img src="https://gw.alipayobjects.com/zos/rmsportal/iwWyPinUoseUxIAeElSx.svg" alt="logo" />
+              <h1>Ant Design Pro</h1>
+            </Link>
           </div>
           <Menu
             onClick={this.handleClick}
@@ -55,41 +66,47 @@ class BasicLayout extends React.PureComponent {
             mode="inline"
             theme="dark"
           >
-            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-              <MenuItemGroup key="g1" title="Item 1">
-                <Menu.Item key="1">Option 1</Menu.Item>
-                <Menu.Item key="2">Option 2</Menu.Item>
-              </MenuItemGroup>
-              <MenuItemGroup key="g2" title="Item 2">
-                <Menu.Item key="3">Option 3</Menu.Item>
-                <Menu.Item key="4">Option 4</Menu.Item>
-              </MenuItemGroup>
+            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Dashoboard</span></span>}>
+              <Menu.Item key="1">Option 1</Menu.Item>
+              <Menu.Item key="2">Option 2</Menu.Item>
+              <Menu.Item key="3">Option 3</Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-              <Menu.Item key="5">Option 5</Menu.Item>
-              <Menu.Item key="6">Option 6</Menu.Item>
-              <SubMenu key="sub3" title="Submenu">
-                <Menu.Item key="7">Option 7</Menu.Item>
-                <Menu.Item key="8">Option 8</Menu.Item>
-              </SubMenu>
+              <Menu.Item key="4">Option 5</Menu.Item>
+              <Menu.Item key="5">Option 6</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub4" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
-              <Menu.Item key="9">Option 9</Menu.Item>
-              <Menu.Item key="10">Option 10</Menu.Item>
-              <Menu.Item key="11">Option 11</Menu.Item>
-              <Menu.Item key="12">Option 12</Menu.Item>
+            <SubMenu key="sub3" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
+              <Menu.Item key="8">Option 9</Menu.Item>
+              <Menu.Item key="9">Option 10</Menu.Item>
+              <Menu.Item key="10">Option 11</Menu.Item>
+              <Menu.Item key="11">Option 12</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
         <Layout>
-          <Header>
-            <h1>Header</h1>
+          <Header className={styles.header}>
+            <Icon
+              className={styles.trigger}
+              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.toggleCollapsed}
+              style={{ marginBottom: 16 }}
+            />
+            {/* <div className={styles.right}>
+              <Avatar />
+              <Avatar />
+              <Dropdown overlay={menu}>
+                <span className={`${styles.action} ${styles.account}`}>
+                  <Avatar size="small" className={styles.avatar} src={currentUser.avatar} />
+                  {currentUser.name}
+                </span>
+              </Dropdown>
+            </div> */}
           </Header>
           <Content>
-            <Card style={{ minHeight: 'calc(100vh - 0px)' }}>
+            <Card style={{ minHeight: 'calc(100vh - 100px)', margin: '20px' }} >
               <h2>Content</h2>
             </Card>
-            <Footer> superman </Footer>
+            <Footer style={{ textAlign: 'center', padding: '70px', lineHeight: '30px' }}> 妈妈咪呀金服 </Footer>
           </Content>
         </Layout>
       </Layout>
