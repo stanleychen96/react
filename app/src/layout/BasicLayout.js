@@ -1,9 +1,11 @@
 import React from 'react';
-import { Layout, Card, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Breadcrumb } from 'antd';
+import { Route, Switch } from 'react-router-dom';
 import { Link } from 'dva/router';
 // import { connect } from 'dva';
 // import { ContainerQuery } from 'react-container-query';
-
+import HeaderSearch from '../components/HeaderSearch';
+// import NotFound from '../routes/404';
 import styles from './BasicLayout.less';
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -32,9 +34,11 @@ const SubMenu = Menu.SubMenu;
 // };
 
 class BasicLayout extends React.PureComponent {
+
   state = {
     collapsed: false,
   }
+
   toggleCollapsed = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -64,10 +68,14 @@ class BasicLayout extends React.PureComponent {
             defaultSelectedKeys={['1']}
             defaultOpenKeys={['sub1']}
             mode="inline"
-            theme="dark"
+            theme="light"
           >
             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Dashoboard</span></span>}>
-              <Menu.Item key="1">Option 1</Menu.Item>
+              <Menu.Item key="1">
+                <Link to="/first">
+                  Option 1
+                </Link>
+              </Menu.Item>
               <Menu.Item key="2">Option 2</Menu.Item>
               <Menu.Item key="3">Option 3</Menu.Item>
             </SubMenu>
@@ -91,21 +99,29 @@ class BasicLayout extends React.PureComponent {
               onClick={this.toggleCollapsed}
               style={{ marginBottom: 16 }}
             />
-            {/* <div className={styles.right}>
-              <Avatar />
-              <Avatar />
-              <Dropdown overlay={menu}>
-                <span className={`${styles.action} ${styles.account}`}>
-                  <Avatar size="small" className={styles.avatar} src={currentUser.avatar} />
-                  {currentUser.name}
-                </span>
-              </Dropdown>
-            </div> */}
+            <div className={styles.right}>
+              <HeaderSearch />
+            </div>
           </Header>
+          <Breadcrumb separator="/" className={styles.breadcrumb}>
+            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>Application Center</Breadcrumb.Item>
+            <Breadcrumb.Item>Application List</Breadcrumb.Item>
+            <Breadcrumb.Item>An Application</Breadcrumb.Item>
+          </Breadcrumb>
           <Content>
-            <Card style={{ minHeight: 'calc(100vh - 100px)', margin: '20px' }} >
-              <h2>Content</h2>
-            </Card>
+            <Switch>
+              <Route
+                path="/first"
+                component={BasicLayout}
+              />
+              <Route
+                path="/second"
+                render={() => (
+                  <h2>second.</h2>
+                )}
+              />
+            </Switch>
             <Footer style={{ textAlign: 'center', padding: '70px', lineHeight: '30px' }}> 妈妈咪呀金服 </Footer>
           </Content>
         </Layout>
