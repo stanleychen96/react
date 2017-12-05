@@ -5,7 +5,7 @@ import { Link } from 'dva/router';
 // import { connect } from 'dva';
 // import { ContainerQuery } from 'react-container-query';
 import HeaderSearch from '../components/HeaderSearch';
-// import NotFound from '../routes/404';
+import NotFound from '../routes/404';
 import styles from './BasicLayout.less';
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -76,8 +76,16 @@ class BasicLayout extends React.PureComponent {
                   Option 1
                 </Link>
               </Menu.Item>
-              <Menu.Item key="2">Option 2</Menu.Item>
-              <Menu.Item key="3">Option 3</Menu.Item>
+              <Menu.Item key="2">
+                <Link to="/second">
+                  Option 2
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="3">
+                <Link to="/third">
+                  Option 3
+                </Link>
+              </Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
               <Menu.Item key="4">Option 5</Menu.Item>
@@ -113,13 +121,24 @@ class BasicLayout extends React.PureComponent {
             <Switch>
               <Route
                 path="/first"
-                component={BasicLayout}
+                render={() => (
+                  <h2>first.</h2>
+                )}
               />
               <Route
                 path="/second"
                 render={() => (
                   <h2>second.</h2>
                 )}
+              />
+              <Route
+                path="/third"
+                render={() => (
+                  <h2>third.</h2>
+                )}
+              />
+              <Route
+                component={NotFound}
               />
             </Switch>
             <Footer style={{ textAlign: 'center', padding: '70px', lineHeight: '30px' }}> 妈妈咪呀金服 </Footer>
