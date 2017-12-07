@@ -6,7 +6,9 @@ import { Link } from 'dva/router';
 // import { ContainerQuery } from 'react-container-query';
 import HeaderSearch from '../components/HeaderSearch';
 import NotFound from '../routes/404';
+import CommentApp from '../routes/Comment';
 import styles from './BasicLayout.less';
+
 
 const { Header, Sider, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -88,7 +90,11 @@ class BasicLayout extends React.PureComponent {
               </Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-              <Menu.Item key="4">Option 5</Menu.Item>
+              <Menu.Item key="4">
+                <Link to="/comment">
+                  comment
+                </Link>
+              </Menu.Item>
               <Menu.Item key="5">Option 6</Menu.Item>
             </SubMenu>
             <SubMenu key="sub3" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
@@ -136,6 +142,10 @@ class BasicLayout extends React.PureComponent {
                 render={() => (
                   <h2>third.</h2>
                 )}
+              />
+              <Route
+                path="/comment"
+                component={CommentApp}
               />
               <Route
                 component={NotFound}

@@ -1,18 +1,12 @@
 import React, { createElement } from 'react';
 import classNames from 'classnames';
 import { Button } from 'antd';
+import config from './typeConfig';
 import styles from './Exception.less';
 
 export default ({ className, linkElement = 'a', type, title, desc, img, actions, ...rest }) => {
   const pageType = type in config ? type : '404';
   const clsString = classNames(styles.exception, className);
-  const config = {
-    404: {
-      img: 'https://gw.alipayobjects.com/zos/rmsportal/KpnpchXsobRgLElEozzI.svg',
-      title: '404',
-      desc: '抱歉，你访问的页面不存在',
-    },
-  };
 
   return (
     <div className={clsString} {...rest}>
