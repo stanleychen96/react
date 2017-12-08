@@ -6,7 +6,7 @@ import { Link } from 'dva/router';
 // import { ContainerQuery } from 'react-container-query';
 import HeaderSearch from '../components/HeaderSearch';
 import NotFound from '../routes/404';
-import CommentApp from '../routes/Comment';
+import CommentApp from '../routes/CommentApp';
 import styles from './BasicLayout.less';
 
 

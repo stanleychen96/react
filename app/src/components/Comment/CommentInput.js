@@ -23,6 +23,14 @@ class CommentInput extends Component {
     });
   }
 
+  handleSubmit() {
+    if (this.props.onSubmit) {
+      const { username, content } = this.state;
+      this.props.onSubmit({ username, content });
+    }
+    this.setState({ content: '' });
+  }
+
   render() {
     return (
       <div className={styles.commentInput}>
@@ -45,8 +53,10 @@ class CommentInput extends Component {
           </div>
         </div>
         <div className={styles.commentFieldButton}>
-          <button>
-            发布
+          <button
+            onClick={this.handleSubmit.bind(this)}
+          >
+          发布
           </button>
         </div>
       </div>
