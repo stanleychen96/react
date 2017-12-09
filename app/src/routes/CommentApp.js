@@ -9,9 +9,21 @@ class CommentApp extends React.PureComponent {
   //   super
   //   this.handleSubmitComment = this.handleSubmitComment.bind(this);
   // }
+  constructor() {
+    super();
+    this.state = {
+      comments: [],
+    };
+  }
 
   handleSubmitComment = (comment) => {
-    console.log(comment);
+    if (!comment) return;
+    if (!comment.username) return ('请输入用户名');
+    if (!comment.content) return ('请输入评论内容');
+    this.state.comments.push(comment);
+    this.setState({
+      comments: this.state.comments,
+    });
   }
 
   render() {
@@ -19,9 +31,11 @@ class CommentApp extends React.PureComponent {
       <div>
         <Card>
           <CommentInput
-            onSubmit={this.handleSubmitComment}
+            onSubmit={this.handleSubmitComment.bind(this)}
           />
-          <CommentList />
+          <CommentList
+            comments={this.state.comments}
+          />
         </Card>
       </div>
     );
