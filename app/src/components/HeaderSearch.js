@@ -1,24 +1,25 @@
-import React, { PureComponent } from 'react';
-import { AutoComplete } from 'antd';
-// import className from 'classnames';
-// import styles from './HeaderSearch.less';
+import React from 'react';
+import { Icon, Input, AutoComplete } from 'antd';
 
-export default class HeaderSearch extends PureComponent {
-  static state = {
-  }
-
+class HeaderSearch extends React.Component {
   render() {
     return (
-      <div>
-        {/* <Icon type="search" /> */}
+      <div className="certain-category-search-wrapper" style={{ width: 250 }}>
         <AutoComplete
-          style={{ width: 200 }}
-          placeholder="本站搜索"
-          filterOption={(inputValue, option) =>
-            option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-          }
-        />
+          className="certain-category-search"
+          dropdownClassName="certain-category-search-dropdown"
+          dropdownMatchSelectWidth={false}
+          dropdownStyle={{ width: 200 }}
+          size="large"
+          style={{ width: '100%' }}
+          placeholder="input here"
+          optionLabelProp="value"
+        >
+          <Input suffix={<Icon type="search" className="certain-category-icon" />} />
+        </AutoComplete>
       </div>
     );
   }
 }
+
+export default HeaderSearch;
