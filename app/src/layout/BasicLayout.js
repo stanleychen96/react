@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import { Link } from 'dva/router';
 // import { connect } from 'dva';
 // import { ContainerQuery } from 'react-container-query';
-import HeaderSearch from '../components/HeaderSearch';
 import NotFound from '../routes/404';
 import CommentApp from '../routes/CommentApp';
 import styles from './BasicLayout.less';
@@ -113,9 +112,6 @@ class BasicLayout extends React.PureComponent {
               onClick={this.toggleCollapsed}
               style={{ marginBottom: 16 }}
             />
-            <div className={styles.right}>
-              <HeaderSearch />
-            </div>
           </Header>
           <Breadcrumb separator="/" className={styles.breadcrumb}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
