@@ -1,22 +1,19 @@
-.col {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
 
 .sidebar {
+  width: 100%;
   margin-top: 17px;
   padding: 0 10px 0 0px;
   margin: 12px 0 0 0;
-  text-align: center;
+  // text-align: center;
+  // flex-direction: row;
 }
 
 .widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0px 0 20px 10px;
   padding: 25px 0px 25px 0px;
-  border: none;
-  background: none;
-  float: left;
   width: 100%;
   background: #fff;
   border-bottom: 4px solid #f8f8f8;
@@ -26,4 +23,82 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.em {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  margin-bottom: 0;
+  width:100%;
+  color: #6f7c82;
+  font-size: 12px;
+  border-radius: 90%;
+  line-height: 32px;
+}
+.a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: normal;
+  color: #6f7c82;
+  padding: 2px 7px 2px 9px !important;
+}
+
+.topBlog {
+  background: #fafafa;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  line-height: 100%;
+  font-size: 34px;
+  font-family: Lora, "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+}
+
+.pic {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.postMeta {
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 20px 0;
+  margin-top: -2px;
+  padding: 20px 0 19px 0;
+  background: #f9f9f9;
+  padding-left: 20px;
+  font-size: 13px;
+  .a {
+    display: inline;
+    letter-spacing: 1px;
+    margin-right: 25px;
+    font-size: 15px;
+    color: #6f7c82;
+    &:link {
+      -webkit-tap-highlight-color: #666;
+    }
+    &:after {
+      width: 5px;
+      height: 5px;
+      font-size: 14px;
+      border-radius: 90px;
+      background: #6f7c82;
+      margin-top: 13px;
+      margin-left: 12px;
+      position: absolute;
+      content: '';
+    }
+  }
 }

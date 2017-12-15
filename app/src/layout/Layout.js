@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Card } from 'antd';
+import { Layout } from 'antd';
 import Top from '../components/Top/Top';
 import MainMenu from '../components/MainMenu/MainMenu';
 import Wrap from '../components/Wrap/Wrap';
@@ -29,13 +29,15 @@ class PageLayout extends React.Component {
           </div>
         </Header>
         <Content style={{ padding: '0', marginTop: 0, minHeight: '96vh', background: '#ffffff' }}>
-          <div>
+          <div className={styles.contentImg}>
             <img
               src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/09/lisbeth-demo1-16.1.jpg"
               alt="meila"
+              width="100%"
+              height="auto"
             />
           </div>
-          <div>
+          <div style={{ width: '90%', paddingLeft: '5%' }}>
             <Wrap />
           </div>
         </Content>
