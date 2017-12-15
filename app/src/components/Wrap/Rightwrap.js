@@ -7,12 +7,6 @@ class Rightwrap extends React.Component {
     return (
       <div>
         <div className={styles.widget}>
-          <div>
-            <Card>
-              a
-            </Card>
-            <div>a</div>
-          </div>
           <div className={styles.subcontent}>
             a
           </div>
