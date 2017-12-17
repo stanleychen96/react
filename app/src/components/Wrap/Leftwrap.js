@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Card } from 'antd';
+import { } from 'antd';
+import Content from '../Content/Content';
 import styles from './index.less';
 
 class Leftwrap extends React.Component {
@@ -15,20 +16,25 @@ class Leftwrap extends React.Component {
                 <div>•</div>
                 <a className={styles.a} href="http://lisbeth.premiumcoding.com/wp/category/lifestyle/" rel="category tag">Lifestyle</a>
               </em>
+              <h2 className={styles.title}>Best coffee in town</h2>
+              <div className={styles.pic}>
+                <img
+                  src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/lisbeth-demo1-1.3-1500x720.jpg"
+                  alt="pic"
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+              <div className={styles.metaline}>
+                <div >September 14, 2017</div>•
+                <div>by Lisbeth</div>•
+                <div>7 Comments</div>
+              </div>
             </div>
-            <h1 className={styles.title}>Best coffee in town</h1>
-            <div className={styles.pic}>
-              <img
-                src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/lisbeth-demo1-1.3-1500x720.jpg"
-                alt="pic"
-                width="100%"
-                height="auto"
-              />
-            </div>
-            <div className={styles.postMeta}>
-              <a className={styles.metaLine} href="http://lisbeth.premiumcoding.com/wp/2017/09/14/" >September 14, 2017</a>
-              <a className={styles.metaLine} style={{ borderBottom: '1px solid' }}>by Lisbeth</a>
-              <a className={styles.metaLine} href="http://lisbeth.premiumcoding.com/wp/handcrafted-jewellery/#comments">7 Comments</a>
+            <Content>a</Content>
+            <div className={styles.bottom}>
+              <div>share</div>
+              <div>share</div>
             </div>
           </div>
         </div>

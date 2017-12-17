@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
-import styles from './index.less';
+import styles from './Right.less';
 
 class Rightwrap extends React.Component {
   render() {
