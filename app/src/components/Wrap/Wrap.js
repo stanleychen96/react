@@ -16,11 +16,11 @@ class Wrap extends React.Component {
           <Leftwrap />
           <Rightwrap />
         </div>
-        {/* <Pagination
+        <Pagination
           defaultCurrent={1}
           total={50}
           className={styles.pagination}
-        /> */}
+        />
       </div>
     );
   }
