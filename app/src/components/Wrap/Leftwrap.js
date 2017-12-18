@@ -1,14 +1,15 @@
 
 import React from 'react';
-import { } from 'antd';
+import { Rate } from 'antd';
 import Content from '../Content/Content';
-import styles from './index.less';
+import styles from './Left.less';
 
 class Leftwrap extends React.Component {
+
   render() {
     return (
       <div>
-        <div className={styles.widget}>
+        <div>
           <div className={styles.topBlog}>
             <div className={styles.blogCategory}>
               <em className={styles.em}>
@@ -31,10 +32,10 @@ class Leftwrap extends React.Component {
                 <div>7 Comments</div>
               </div>
             </div>
-            <Content>a</Content>
+            <Content />
             <div className={styles.bottom}>
-              <div>share</div>
-              <div>share</div>
+              <div className={styles.favourite} style={{ fontSize: '14px', letterSpacing: '2px', color: '#6f7c82' }}>share</div>
+              <Rate className={styles.favourite} allowHalf defaultValue={2.5} />
             </div>
           </div>
         </div>

@@ -1,22 +1,28 @@
 import React from 'react';
-// import { Card } from 'antd';
+import Instagram from '../Instagram/instagram';
+import Introduce from '../Introduce/Introduce';
 import styles from './Right.less';
 
 class Rightwrap extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      content: 'I am a blogger living in New York. This is my blog, I am a blogger living in New York. Never miss out on new food stuff & healthy recipes.',
+    };
+  }
   render() {
     return (
       <div>
         <div className={styles.widget}>
           <div className={styles.subcontent}>
-            <h3 className={styles.subcontentH3}>about</h3>
-            <div>
-              <p className={styles.p}>
-                <img src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/avatar2.jpg" alt="'up'" />
-                <b>Hello, my name is</b>
-                <b>Lisbeth</b>
-                  I am a blogger living in New York. This is my blog,
-              </p>
-            </div>
+            <h3 style={{ textTransform: 'none', fontStyle: 'italic', fontFamily: 'Lora' }}>About me</h3>
+            <Introduce />
+          </div>
+        </div>
+        <div className={styles.widget}>
+          <div className={styles.subcontent}>
+            <h3 style={{ textTransform: 'none', fontStyle: 'italic', fontFamily: 'Lora' }}>About me</h3>
+            <Instagram />
           </div>
         </div>
       </div>

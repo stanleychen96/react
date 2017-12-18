@@ -1,26 +1,17 @@
 import React from 'react';
-import { Pagination } from 'antd';
 import Leftwrap from './Leftwrap';
 import Rightwrap from './Rightwrap';
-import styles from './index.less';
+// import Introduce from '../Introduce/Introduce';
+// import styles from './Wrap.less';
 
 class Wrap extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.sidebar}>
-          <Leftwrap />
-          <Leftwrap />
-          <Leftwrap />
-          <Leftwrap />
+        <div>
           <Leftwrap />
           <Rightwrap />
         </div>
-        <Pagination
-          defaultCurrent={1}
-          total={50}
-          className={styles.pagination}
-        />
       </div>
     );
   }
