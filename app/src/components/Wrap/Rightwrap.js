@@ -21,7 +21,7 @@ class Rightwrap extends React.Component {
         </div>
         <div className={styles.widget}>
           <div className={styles.subcontent}>
-            <h3 style={{ textTransform: 'none', fontStyle: 'italic', fontFamily: 'Lora' }}>About me</h3>
+            <h3 style={{ textTransform: 'none', fontStyle: 'italic', fontFamily: 'Lora' }}>Instagram</h3>
             <Instagram />
           </div>
         </div>
