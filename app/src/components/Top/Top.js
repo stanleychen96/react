@@ -9,7 +9,9 @@ class Top extends React.Component {
     return (
       <div className={styles.topWrapper}>
         <div className={styles.left}>
-          <Icon type="github" style={{ fontSize: '32px' }} />
+          <a href="https://github/stanleychen96.com" target="_blank">
+            <Icon type="github" style={{ fontSize: '32px' }} />
+          </a>
         </div>
         <div className={styles.right}>
           <Search

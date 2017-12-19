@@ -1,8 +1,9 @@
 import React from 'react';
 import { Layout } from 'antd';
-import Top from '../components/Top/Top';
+// import Top from '../components/Top/Top';
 import MainMenu from '../components/MainMenu/MainMenu';
 import Wrap from '../components/Wrap/Wrap';
+import Bottom from '../components/Bottom/Bottom';
 // import Leftwrap from '../components/Wrap/Leftwrap';
 // import Rightwrap from '../components/Wrap/Rightwrap';
 import styles from './Layout.less';
@@ -13,7 +14,7 @@ class PageLayout extends React.Component {
   render() {
     const layout = (
       <Layout>
-        <Top />
+        {/* <Top /> */}
         <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
           <div className={styles.root}>
             <div className={styles.leftlogo}>
@@ -37,9 +38,10 @@ class PageLayout extends React.Component {
               height="auto"
             />
           </div>
-          <div style={{ paddingLeft: '5%', paddingRight: '5%' }}>
+          <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
             <Wrap />
           </div>
+          <Bottom />
         </Content>
         <Footer style={{ textAlign: 'center' }}>
           © 2017 copyright PREMIUMCODING // All rights reserved

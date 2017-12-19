@@ -1,25 +1,23 @@
 .root {
-  display: flex;
+  display: block;
+  position: relative;
   width: 100%;
+  height: auto;
   flex-direction: column;
 }
 
 .wrap {
-  display: flex;
+  display: block;
   width: 100%;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-}
-
-.instagramImg {
-  display: flex;
-  width: auto !important;
-  height: auto !important;
-}
-
-.pic {
+  height: 100%;
   position: relative;
-  width: 100%;
-  height: auto;
+  overflow: visible;
+  list-style: square;
+
+  img {
+    // display: flex;
+    width: 50%;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
 }

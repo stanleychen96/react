@@ -12,7 +12,7 @@ class Rightwrap extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ maxWidth: '1200px' }}>
         <div className={styles.widget}>
           <div className={styles.subcontent}>
             <h3 style={{ textTransform: 'none', fontStyle: 'italic', fontFamily: 'Lora' }}>About me</h3>
