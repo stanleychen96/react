@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 // import Top from '../components/Top/Top';
-import MainMenu from '../components/MainMenu/MainMenu';
+// import MainMenu from '../components/MainMenu/MainMenu';
 import Wrap from '../components/Wrap/Wrap';
 import Bottom from '../components/Bottom/Bottom';
 // import Leftwrap from '../components/Wrap/Leftwrap';
@@ -25,11 +25,11 @@ class PageLayout extends React.Component {
               />
             </div>
             <div className={styles.rightmenu}>
-              <MainMenu />
+              {/* <MainMenu /> */}
             </div>
           </div>
         </Header>
-        <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
+        <Content style={{ minHeight: '96vh', background: '#ffffff' }}> 
           <div className={styles.contentImg}>
             <img
               src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/09/lisbeth-demo1-16.1.jpg"
