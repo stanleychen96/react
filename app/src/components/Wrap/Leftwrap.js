@@ -5,7 +5,6 @@ import Content from '../Content/Content';
 import styles from './Left.less';
 
 class Leftwrap extends React.Component {
-
   render() {
     return (
       <div>
@@ -36,6 +35,13 @@ class Leftwrap extends React.Component {
             <div className={styles.bottom}>
               <div className={styles.favourite} style={{ fontSize: '14px', letterSpacing: '2px', color: '#6f7c82' }}>share</div>
               <Rate className={styles.favourite} allowHalf defaultValue={2.5} />
+            </div>
+            <div className={styles.view_port}>
+              <div className={styles.polling_message}>
+                <div className={styles.cylon_eye}>
+                  Listening for dispatches
+                </div>
+              </div>
             </div>
           </div>
         </div>
