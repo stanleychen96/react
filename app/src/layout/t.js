@@ -26,14 +26,13 @@ class PageLayout extends React.Component {
             </div>
           </div>
         </Header>
-        <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
+        <Content style={{ minHeight: '96vh', background: '#ffffff' }}> 
           <div className={styles.contentImg}>
             <img
               src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/09/lisbeth-demo1-16.1.jpg"
               alt="meila"
               width="100%"
               height="auto"
-              styles={{ position: 'relative' }}
             />
           </div>
           <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
