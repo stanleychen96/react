@@ -8,7 +8,7 @@ class Leftwrap extends React.Component {
   render() {
     return (
       <div>
-        <div data-aos="animation_name">
+        <div>
           <div className={styles.topBlog}>
             <div className={styles.blogCategory}>
               <em className={styles.em}>

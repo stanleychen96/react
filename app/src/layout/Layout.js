@@ -17,7 +17,9 @@ class PageLayout extends React.Component {
         {/* <Top /> */}
         <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
           <div className={styles.root}>
-            <div className={styles.leftlogo}>
+            <div
+              className={styles.leftlogo}
+            >
               <img
                 src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/lisbeth-logo-new-second.png"
                 data-rjs="3"
@@ -27,13 +29,13 @@ class PageLayout extends React.Component {
           </div>
         </Header>
         <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
-          <div className={styles.contentImg}>
+          <div className={styles.mainImg}>
+            <div className={styles.imgCard}>This is an imgcard</div>
             <img
               src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/09/lisbeth-demo1-16.1.jpg"
               alt="meila"
               width="100%"
               height="auto"
-              styles={{ position: 'relative' }}
             />
           </div>
           <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
