@@ -1,6 +1,9 @@
 import dva from 'dva';
 import './index.css';
+import m from './models/index';
 
+console.log(m);
+console.log(require('./models/instagram'));
 // 1. Initialize
 const app = dva();
 
@@ -8,7 +11,7 @@ const app = dva();
 // app.use({});
 
 // 3. Model
-// app.model(require('./models/example'));
+app.model(require('./models/instagram'));
 
 // 4. Router
 app.router(require('./router'));

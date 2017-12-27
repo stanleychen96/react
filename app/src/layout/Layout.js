@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
-// import Top from '../components/Top/Top';
+import Top from '../components/Top/Top';
 // import MainMenu from '../components/MainMenu/MainMenu';
 import Wrap from '../components/Wrap/Wrap';
 import Bottom from '../components/Bottom/Bottom';
@@ -14,7 +14,7 @@ class PageLayout extends React.Component {
   render() {
     const layout = (
       <Layout>
-        {/* <Top /> */}
+        <Top />
         <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
           <div className={styles.root}>
             <div
