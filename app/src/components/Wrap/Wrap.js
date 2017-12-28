@@ -1,5 +1,6 @@
 import React from 'react';
 import Leftwrap from './Leftwrap';
+import Content from '../Content/Content';
 import Rightwrap from './Rightwrap';
 // import Introduce from '../Introduce/Introduce';
 import styles from './Wrap.less';
@@ -10,9 +11,7 @@ class Wrap extends React.Component {
       <div>
         <div className={styles.flex}>
           <div>
-            <Leftwrap />
-            <Leftwrap />
-            <Leftwrap />
+            <Content />
           </div>
           <Rightwrap />
         </div>

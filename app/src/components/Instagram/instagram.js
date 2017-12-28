@@ -13,7 +13,8 @@ class Instagram extends React.Component {
     };
   }
 
-  refreshInstagram() {
+  refreshInstagram = () => {
+    console.log('..');
     this.props.dispatch({
       type: 'instagram/fetchImg',
     });
@@ -39,7 +40,7 @@ class Instagram extends React.Component {
           <img
             src={this.state.refresh}
             alt="refresh"
-            onClick={this.refreshInstagram.bind(this)}
+            onClick={this.refreshInstagram}
           />
         </div>
       </div>

@@ -1,4 +1,3 @@
-import imgTry from './imgTry';
 
 export default {
 
@@ -13,13 +12,13 @@ export default {
   },
 
   effects: {
-    * fetchImg({ payload }, { call, put }) {  // eslint-disable-line
-      const img = yield call(imgTry);
+    * fetchImg(_, { put }) {  // eslint-disable-line
+      // const img = yield call();
       yield put({
         type: 'saveInstagram',
-        payload: img,
+        payload: [],
       });
-      console.log('....');
+      console.log('payload');
     },
   },
 
