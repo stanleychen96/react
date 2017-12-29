@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rate } from 'antd';
+import { Rate, Popconfirm } from 'antd';
 import { connect } from 'dva';
 
 import styles from './Content.less';
@@ -9,7 +9,7 @@ class Content extends React.Component {
     content: 'o be successful, a home office needs to be both functional and efficient. You are going to be working in this environment for several hours each day so it is important that you make it as comfortable as possible. You can design a practical and comfortable home office by taking a few steps towards finding the right space, furnishing it, and making it attractive and efficient.',
   };
   render() {
-    const {} = this.props;
+    // const {} = this.props;
     return (
       <div className={styles.topBlog}>
 
@@ -42,7 +42,11 @@ class Content extends React.Component {
         </div>
         <div className={styles.h}>Continue reading</div>
         <div className={styles.bottom}>
-          <div className={styles.favourite}>share</div>
+          <div className={styles.favourite}>
+            <Popconfirm title="Are you sure？" okText="Yes" cancelText="No">
+              <a>Share</a>
+            </Popconfirm>
+          </div>
           <Rate
             className={styles.favourite}
             allowHalf defaultValue={2.5}
