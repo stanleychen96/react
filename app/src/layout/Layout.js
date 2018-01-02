@@ -1,17 +1,30 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Icon } from 'antd';
+import { connect } from 'dva';
 import Top from '../components/Top/Top';
-// import MainMenu from '../components/MainMenu/MainMenu';
 import Wrap from '../components/Wrap/Wrap';
 import Bottom from '../components/Bottom/Bottom';
-// import Leftwrap from '../components/Wrap/Leftwrap';
-// import Rightwrap from '../components/Wrap/Rightwrap';
 import styles from './Layout.less';
 
 const { Header, Content, Footer } = Layout;
 
 class PageLayout extends React.Component {
+
+  // lastImgCard = () => {
+  //   this.props.dispatch({
+  //     type: 'layout/lastImgCard',
+  //   });
+  // }
+
+  // nextImgCard = () => {
+  //   this.props.dispatch({
+  //     type: 'layout/nextImgCard',
+  //   });
+  // };
+
   render() {
+    const { layoutData } = this.props;
+
     const layout = (
       <Layout>
         <Top />
@@ -30,9 +43,16 @@ class PageLayout extends React.Component {
         </Header>
         <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
           <div className={styles.mainImg}>
-            <div className={styles.imgCard}>This is an imgcard</div>
+            <div className={styles.imgCard}>
+              {layoutData.imgCardDiscrible}
+              <div className={styles.cardController}>
+                <Icon type="left" onClick={this.lastImgCard} />
+                <Icon type="right" onClick={this.nextImgCard} />
+              </div>
+            </div>
             <img
-              src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/09/lisbeth-demo1-16.1.jpg"
+              src={layoutData.mainImg}
+              key={layoutData.mainImg.key}
               alt="meila"
               width="100%"
               height="auto"
@@ -56,4 +76,7 @@ class PageLayout extends React.Component {
   }
 }
 
-export default PageLayout;
+export default connect(state => ({
+  layoutData: state.layout,
+}))(PageLayout);
+

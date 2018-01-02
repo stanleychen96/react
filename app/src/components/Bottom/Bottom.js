@@ -1,20 +1,19 @@
 import React from 'react';
-import { Spin, Icon } from 'antd';
+import { Spin, Popover } from 'antd';
 import styles from './Bottom.less';
 
 class Footer extends React.Component {
   render() {
+    this.state = {
+      content: '正在施工',
+    };
     return (
       <div className={styles.widget}>
-        <Spin
-          size="small"
-        />
-        <div className={styles.icon}>
-          <Icon type="alipay-circle" />
-          <Icon type="wechat" />
-          <Icon type="qq" />
-          <Icon type="facebook" />
-        </div>
+        <Popover content={this.state.content} trigger="click">
+          <Spin
+            size="small"
+          />
+        </Popover>
       </div>
     );
   }

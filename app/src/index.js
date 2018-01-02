@@ -11,6 +11,7 @@ const app = dva();
 app.model(require('./models/instagram'));
 app.model(require('./models/content'));
 app.model(require('./models/introduce'));
+app.model(require('./models/layout'));
 
 // 4. Router
 app.router(require('./router'));

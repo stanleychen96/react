@@ -1,8 +1,8 @@
 import React from 'react';
-import { Icon, Input } from 'antd';
+import { Icon } from 'antd';
 import styles from './Top.less';
 
-const Search = Input.Search;
+// const Search = Input.Search;
 
 class Top extends React.Component {
   render() {
@@ -13,13 +13,13 @@ class Top extends React.Component {
             <Icon type="github" style={{ fontSize: '32px' }} />
           </a>
         </div>
-        <div className={styles.right}>
+        {/* <div className={styles.right}>
           <Search
             defaultValue="Search and hit enter"
             style={{ width: 200 }}
             className={styles.search}
           />
-        </div>
+        </div> */}
       </div>
     );
   }

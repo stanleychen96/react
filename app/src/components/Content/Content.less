@@ -75,6 +75,11 @@
   font-weight: normal;
   color: #6f7c82;
   padding: 2px 7px 2px 9px !important;
+  @media screen and (max-width:515px) {
+    flex-direction: column;
+    line-height: 13px;
+    margin-top: -2px;
+  }
 }
 
 .bottom {
@@ -111,11 +116,13 @@
   font-size: 15px;
   font-family: initial;
   color:#6f7c82;
-  transition: color 2s;
-  -webkit-transition: color 2s ease;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transform: scale3d(1, 1, 1);
+  -webkit-transform: scale3d(1, 1, 1);
+  cursor: pointer;
   &:hover {
-    // transform-style: preserve-3d;
-    // -webkit-transform-style: preserve-3d;
     color: #4b33ad79;
+    font-size: 18px;
   }
 }

@@ -11,7 +11,7 @@ class Introduce extends React.Component {
       <div>
         <div className={styles.mobileBar}>
           <p>
-            <img src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/avatar2.jpg" alt="'up'" className={styles.sideImg} />
+            <img src={introduce.src} alt="'up'" className={styles.sideImg} />
             <div style={{ fontSize: '15px', lineHeight: '28px', paddingTop: '10px', textAlign: 'left' }}>
               <b>Hello, my name is </b>
               <b>{introduce.name}. </b>
