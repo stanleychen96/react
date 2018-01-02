@@ -22,6 +22,7 @@ class Instagram extends React.Component {
 
   render() {
     const { instagram } = this.props;
+    console.log('1', instagram);
 
     return (
       <div className={styles.root}>

@@ -1,14 +1,12 @@
 import React from 'react';
+import { connect } from 'dva';
 import styles from './Introduce.less';
 
 class Introduce extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      content: 'I am a blogger living in New York. This is my blog, I am a blogger living in New York. Never miss out on new food stuff & healthy recipes.',
-    };
-  }
+
   render() {
+    const { introduce } = this.props;
+    console.log('introduce', introduce);
     return (
       <div>
         <div className={styles.mobileBar}>
@@ -16,8 +14,8 @@ class Introduce extends React.Component {
             <img src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/avatar2.jpg" alt="'up'" className={styles.sideImg} />
             <div style={{ fontSize: '15px', lineHeight: '28px', paddingTop: '10px', textAlign: 'left' }}>
               <b>Hello, my name is </b>
-              <b>Lisbeth. </b>
-              {this.state.content};
+              <b>{introduce.name}. </b>
+              {introduce.myWord};
             </div>
           </p>
         </div>
@@ -26,4 +24,6 @@ class Introduce extends React.Component {
   }
 }
 
-export default Introduce;
+export default connect(state => ({
+  introduce: state.introduce,
+}))(Introduce);

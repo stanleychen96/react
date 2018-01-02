@@ -1,17 +1,32 @@
 import React from 'react';
-import Leftwrap from './Leftwrap';
+import { connect } from 'dva';
 import Content from '../Content/Content';
 import Rightwrap from './Rightwrap';
-// import Introduce from '../Introduce/Introduce';
 import styles from './Wrap.less';
 
 class Wrap extends React.Component {
   render() {
+    const { content } = this.props;
+    console.log('wrap', content);
+
     return (
       <div>
         <div className={styles.flex}>
           <div>
-            <Content />
+            {
+              content.contentInfo.map(item =>
+                (
+                  <Content
+                    key={item.key}
+                    labelA={item.labelA}
+                    labelB={item.labelB}
+                    title={item.title}
+                    author={item.author}
+                    commentsNum={item.commentsNum}
+                  />
+                ),
+              )
+            }
           </div>
           <Rightwrap />
         </div>
@@ -20,4 +35,6 @@ class Wrap extends React.Component {
   }
 }
 
-export default Wrap;
+export default connect(state => ({
+  content: state.content,
+}))(Wrap);
