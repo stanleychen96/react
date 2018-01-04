@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rate } from 'antd';
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 
 import styles from './Content.less';
 
@@ -54,7 +55,11 @@ class Content extends React.Component {
             {this.state.content}
           </div>
         </div>
-        <div className={styles.h}>Continue reading</div>
+        <div className={styles.h}>
+          <Link to="/continueRead">
+            Continue reading
+          </Link>
+        </div>
         <div className={styles.bottom}>
           <Rate
             className={styles.favourite}

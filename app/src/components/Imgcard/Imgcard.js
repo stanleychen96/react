@@ -95,6 +95,9 @@ class Imgcard extends React.Component {
         <Element
           key="aaa"
           prefixCls={styles.bannerUserElem}
+          style={{
+            height: '100%',
+          }}
         >
           <BgElement
             key="bg"
@@ -146,7 +149,7 @@ class Imgcard extends React.Component {
           onMouseLeave={this.prevLeave}
           animation={{ left: this.state.prevEnter ? 0 : -120 }}
         >
-          <div className={styles.arrow}>1</div>
+          {/* <div className={styles.arrow}></div> */}
           <TweenOneGroup
             enter={{ opacity: 0, type: 'from' }}
             leave={{ opacity: 0 }}
@@ -162,7 +165,7 @@ class Imgcard extends React.Component {
           onMouseLeave={this.nextLeave}
           animation={{ right: this.state.nextEnter ? 0 : -120 }}
         >
-          <div className={styles.arrow}>1</div>
+          {/* <div className={styles.arrow}></div> */}
           <TweenOneGroup
             enter={{ opacity: 0, type: 'from' }}
             leave={{ opacity: 0 }}

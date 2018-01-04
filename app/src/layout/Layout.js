@@ -1,10 +1,15 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Icon } from 'antd';
 import { connect } from 'dva';
+import { Route, Switch } from 'react-router-dom';
+// import { Link } from 'dva/router';
 import Top from '../components/Top/Top';
 import Wrap from '../components/Wrap/Wrap';
 import Bottom from '../components/Bottom/Bottom';
-import Imgcard from '../components/Imgcard/Imgcard';
+// import Imgcard from '../components/Imgcard/Imgcard';
+// import Anothercard from '../components/Anothercard/Anothercard';
+import NotFound from '../routes/404';
+import ContinueRead from '../routes/continueRead';
 import styles from './Layout.less';
 
 const { Header, Content, Footer } = Layout;
@@ -24,7 +29,7 @@ class PageLayout extends React.Component {
   // };
 
   render() {
-    // const { layoutData } = this.props;
+    const { layoutData } = this.props;
 
     const layout = (
       <Layout>
@@ -42,10 +47,10 @@ class PageLayout extends React.Component {
             </div>
           </div>
         </Header>
-        <Imgcard />
-
+        {/* <Imgcard /> */}
+        {/* <Anothercard /> */}
         <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
-          {/* <div className={styles.mainImg}>
+          <div className={styles.mainImg}>
             <div className={styles.imgCard}>
               {layoutData.imgCardDiscrible}
               <div className={styles.cardController}>
@@ -60,9 +65,21 @@ class PageLayout extends React.Component {
               width="100%"
               height="auto"
             />
-          </div> */}
+          </div>
           <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
-            <Wrap />
+            <Switch>
+              <Route
+                path="/"
+                component={Wrap}
+              />
+              <Route
+                path="/continueRead"
+                component={ContinueRead}
+              />
+              <Route
+                component={NotFound}
+              />
+            </Switch>
           </div>
           <Bottom />
         </Content>
