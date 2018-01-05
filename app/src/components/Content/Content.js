@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rate } from 'antd';
+import { Icon } from 'antd';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
@@ -55,19 +55,11 @@ class Content extends React.Component {
             {this.state.content}
           </div>
         </div>
-        <div className={styles.h}>
-          <Link to="/continueRead">
+        <div className={styles.bottom}>
+          <Icon type="smile-o" className={styles.icon} />
+          <Link to="/continueRead" className={styles.link}>
             Continue reading
           </Link>
-        </div>
-        <div className={styles.bottom}>
-          <Rate
-            className={styles.favourite}
-            allowHalf defaultValue={2.5}
-            disabled={this.rate.disabled}
-            allowClear={this.rate.allowClear}
-            onChange={this.handleRateChange}
-          />
         </div>
       </div>
     );

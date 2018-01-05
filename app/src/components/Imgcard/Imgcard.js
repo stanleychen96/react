@@ -109,15 +109,6 @@ class Imgcard extends React.Component {
               height: '100%',
             }}
           />
-          <TweenOne className={styles.bannerUserTitle} animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
-          </TweenOne>
-          <TweenOne
-            className={styles.bannerUserText}
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-          >
-            The Fast Way Use Animation In React
-            </TweenOne>
         </Element>
         <Element
           key="bbb"
@@ -133,15 +124,6 @@ class Imgcard extends React.Component {
               height: '100%',
             }}
           />
-          <TweenOne className={styles.bannerUserTitle} animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
-          </TweenOne>
-          <TweenOne
-            className={styles.bannerUserText}
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-          >
-            The Fast Way Use Animation In React
-          </TweenOne>
         </Element>
         <Arrow
           arrowType="prev" key="prev" prefixCls={styles.userArrow} component={TweenOne}

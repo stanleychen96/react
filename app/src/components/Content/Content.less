@@ -12,8 +12,13 @@
   margin: 9px 10px 0 -7px!important;
   font-weight: 700;
   line-height: 76px !important;
-
   font-size: 100px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  &:hover {
+    transform: rotateY(10turn);
+    -webkit-transform: rotateY(10turn); 
+  }
 }
 .topBlog {
   margin-bottom: 80px;
@@ -85,17 +90,31 @@
 .bottom {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   max-height: 50px;
   padding-top: 2px;
   line-height: 4em;
 
-  .Rate {
-    margin: 0 32px;
+  .icon {
+    display: flex;
+    margin: auto 10px;
+    font-size: 20px;
+    color: #76a17c;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    &:hover {
+      color: #ec0c0c;
+      cursor: pointer;
+      transform: rotate(20turn);
+      -webkit-transform: rotate(20turn);
+    }
+  }
+  .link {
+    margin: auto 10px;
   }
 }
 

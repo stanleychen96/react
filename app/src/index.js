@@ -12,6 +12,7 @@ app.model(require('./models/instagram'));
 app.model(require('./models/content'));
 app.model(require('./models/introduce'));
 app.model(require('./models/layout'));
+app.model(require('./models/imgcard'));
 
 // 4. Router
 app.router(require('./router'));

@@ -1,16 +1,14 @@
 import React from 'react';
-import { Layout, Icon } from 'antd';
-import { connect } from 'dva';
+import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
-// import { Link } from 'dva/router';
+import Headerbar from '../components/Headerbar/Headerbar';
 import Top from '../components/Top/Top';
-import Wrap from '../components/Wrap/Wrap';
 import Bottom from '../components/Bottom/Bottom';
-// import Imgcard from '../components/Imgcard/Imgcard';
-// import Anothercard from '../components/Anothercard/Anothercard';
-import NotFound from '../routes/404';
-import ContinueRead from '../routes/continueRead';
-import styles from './Layout.less';
+import Anothercard from '../components/Anothercard/Anothercard';
+import Wrap from '../routes/Wrap/Wrap';
+import NotFound from '../routes/404/404';
+import ContinueRead from '../routes/ContinueRead';
+import Imgcard from '../components/Imgcard/Imgcard';
 
 const { Header, Content, Footer } = Layout;
 
@@ -29,46 +27,29 @@ class PageLayout extends React.Component {
   // };
 
   render() {
-    const { layoutData } = this.props;
-
     const layout = (
       <Layout>
         <Top />
         <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
-          <div className={styles.root}>
-            <div
-              className={styles.leftlogo}
-            >
-              <img
-                src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/lisbeth-logo-new-second.png"
-                data-rjs="3"
-                alt="Lisbeth WordPress Blog - Lisbeth WordPress blog"
-              />
-            </div>
-          </div>
+          <Headerbar />
         </Header>
         {/* <Imgcard /> */}
-        {/* <Anothercard /> */}
-        <Content style={{ minHeight: '96vh', background: '#ffffff' }}>
-          <div className={styles.mainImg}>
-            <div className={styles.imgCard}>
-              {layoutData.imgCardDiscrible}
-              <div className={styles.cardController}>
-                <Icon type="left" onClick={this.lastImgCard} />
-                <Icon type="right" onClick={this.nextImgCard} />
-              </div>
-            </div>
-            <img
-              src={layoutData.mainImg}
-              key={layoutData.mainImg.key}
-              alt="meila"
-              width="100%"
-              height="auto"
-            />
-          </div>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={Anothercard}
+          />
+          <Route
+            path="/continueRead"
+            component={Imgcard}
+          />
+        </Switch>
+        <Content style={{ background: '#ffffff' }}>
           <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
             <Switch>
               <Route
+                exact
                 path="/"
                 component={Wrap}
               />
@@ -96,7 +77,5 @@ class PageLayout extends React.Component {
   }
 }
 
-export default connect(state => ({
-  layoutData: state.layout,
-}))(PageLayout);
+export default PageLayout;
 

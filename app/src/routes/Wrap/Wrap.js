@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
-import Content from '../Content/Content';
-import Rightwrap from './Rightwrap';
+import Content from '../../components/Content/Content';
+import Rightwrap from '../../components/Rightwrap/Rightwrap';
 import styles from './Wrap.less';
 
 class Wrap extends React.Component {

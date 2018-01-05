@@ -1,11 +1,9 @@
 import React from 'react';
-import BannerAnim, { Element } from 'rc-banner-anim';
-// import TweenOne from 'rc-tween-one';
-import 'rc-banner-anim/assets/index.css';
+import { Icon } from 'antd';
+import { connect } from 'dva';
 
 import styles from './Anothercard.less';
 
-const BgElement = Element.BgElement;
 class Anothercard extends React.Component {
   constructor(props) {
     super(props);
@@ -21,47 +19,28 @@ class Anothercard extends React.Component {
     };
   }
   render() {
+    const { imgcard } = this.props;
     return (
-      <BannerAnim prefixCls={styles.bannerUser}>
-        <Element
-          prefixCls={styles.bannerUserElem}
-          key="0"
-          style={{
-            height: '100%',
-          }}
-        >
-          <BgElement
-            key="bg"
-            className={styles.bg}
-            style={{
-              backgroundImage: `url(${this.imgArray[0]})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '100%',
-            }}
-          />
-        </Element>
-        <Element
-          prefixCls={styles.bannerUserElem}
-          key="1"
-          style={{
-            height: '100%',
-          }}
-        >
-          <BgElement
-            key="bg"
-            className={styles.bg}
-            style={{
-              backgroundImage: `url(${this.imgArray[1]})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '100%',
-            }}
-          />
-        </Element>
-      </BannerAnim>
+      <div className={styles.mainImg}>
+        <div className={styles.imgCard}>
+          {imgcard.imgCardDiscrible}
+          <div className={styles.cardController}>
+            <Icon type="left" onClick={this.lastImgCard} />
+            <Icon type="right" onClick={this.nextImgCard} />
+          </div>
+        </div>
+        <img
+          src={imgcard.mainImg}
+          key={imgcard.mainImg.key}
+          alt="meila"
+          width="100%"
+          height="auto"
+        />
+      </div>
     );
   }
 }
 
-export default Anothercard;
+export default connect(state => ({
+  imgcard: state.imgcard,
+}))(Anothercard);

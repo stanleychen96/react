@@ -1,8 +1,22 @@
 import React from 'react';
+import { } from 'antd';
 import { Link } from 'dva/router';
-import Exception from '../components/Exception/Exception';
+import Content from '../components/Content/Content';
 
-export default () => (
-  <Exception type="404" style={{ minHeight: 500, height: '80%' }} linkElement={Link} />
-);
+class ContinueRead extends React.Component {
+  state = {
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.',
+  };
+  render() {
+    return (
+      <div>
+        <Content />
+        <Link to="/">
+          return
+        </Link>
+      </div>
+    );
+  }
+}
+export default ContinueRead;
 
