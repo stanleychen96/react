@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'dva';
-import Content from '../../components/Content/Content';
-import Rightwrap from '../../components/Rightwrap/Rightwrap';
+import Content from '../../components/Content';
+import ContinueTap from '../../components/Content/ContinueTap';
+import RightWrap from '../../components/RightWrap/';
 import styles from './Wrap.less';
 
 class Wrap extends React.Component {
@@ -16,19 +17,21 @@ class Wrap extends React.Component {
             {
               content.contentInfo.map(item =>
                 (
-                  <Content
-                    key={item.key}
-                    labelA={item.labelA}
-                    labelB={item.labelB}
-                    title={item.title}
-                    author={item.author}
-                    commentsNum={item.commentsNum}
-                  />
+                  <div key={item.key}>
+                    <Content
+                      labelA={item.labelA}
+                      labelB={item.labelB}
+                      title={item.title}
+                      author={item.author}
+                      commentsNum={item.commentsNum}
+                    />
+                    <ContinueTap />
+                  </div>
                 ),
               )
             }
           </div>
-          <Rightwrap />
+          <RightWrap />
         </div>
       </div>
     );

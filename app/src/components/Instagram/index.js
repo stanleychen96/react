@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 
-import styles from './instagram.less';
+import styles from './index.less';
 
 // const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 

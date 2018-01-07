@@ -1,14 +1,16 @@
 import React from 'react';
 import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
-import Headerbar from '../components/Headerbar/Headerbar';
-import Top from '../components/Top/Top';
-import Bottom from '../components/Bottom/Bottom';
-import Anothercard from '../components/Anothercard/Anothercard';
-import Wrap from '../routes/Wrap/Wrap';
+
 import NotFound from '../routes/404/404';
-import ContinueRead from '../routes/ContinueRead';
-import Imgcard from '../components/Imgcard/Imgcard';
+import ContinueRead from '../routes/ContinueRead/ContinueRead';
+import Wrap from '../routes/Wrap/Wrap';
+
+import HeaderBar from '../components/HeaderBar';
+import Top from '../components/Top';
+import Bottom from '../components/Bottom';
+import AnotherCard from '../components/AnotherCard';
+import ImgCard from '../components/ImgCard';
 
 const { Header, Content, Footer } = Layout;
 
@@ -31,18 +33,18 @@ class PageLayout extends React.Component {
       <Layout>
         <Top />
         <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
-          <Headerbar />
+          <HeaderBar />
         </Header>
         {/* <Imgcard /> */}
         <Switch>
           <Route
             exact
             path="/"
-            component={Anothercard}
+            component={AnotherCard}
           />
           <Route
             path="/continueRead"
-            component={Imgcard}
+            component={ImgCard}
           />
         </Switch>
         <Content style={{ background: '#ffffff' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spin, Popover } from 'antd';
-import styles from './Bottom.less';
+import styles from './index.less';
 
 class Footer extends React.Component {
   render() {

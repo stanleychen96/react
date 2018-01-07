@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Headerbar.less';
+import styles from './index.less';
 
 // const Search = Input.Search;
 

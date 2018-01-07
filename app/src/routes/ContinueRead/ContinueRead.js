@@ -1,7 +1,6 @@
 import React from 'react';
-import { } from 'antd';
-import { Link } from 'dva/router';
-import Content from '../components/Content/Content';
+import Content from '../../components/Content';
+import ReturnTap from '../../components/Content/ReturnTap';
 
 class ContinueRead extends React.Component {
   state = {
@@ -11,9 +10,7 @@ class ContinueRead extends React.Component {
     return (
       <div>
         <Content />
-        <Link to="/">
-          return
-        </Link>
+        <ReturnTap />
       </div>
     );
   }

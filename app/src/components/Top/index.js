@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from 'antd';
-import styles from './Top.less';
+import styles from './index.less';
 
 // const Search = Input.Search;
 

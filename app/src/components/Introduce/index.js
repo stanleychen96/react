@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './Introduce.less';
+import styles from './index.less';
 
 class Introduce extends React.Component {
 

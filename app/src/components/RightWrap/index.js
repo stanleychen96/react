@@ -1,7 +1,7 @@
 import React from 'react';
-import Instagram from '../Instagram/instagram';
-import Introduce from '../Introduce/Introduce';
-import styles from './Right.less';
+import Instagram from '../Instagram';
+import Introduce from '../Introduce/';
+import styles from './index.less';
 
 class Rightwrap extends React.Component {
   constructor() {

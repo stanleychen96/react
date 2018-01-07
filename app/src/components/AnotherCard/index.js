@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from 'antd';
 import { connect } from 'dva';
 
-import styles from './Anothercard.less';
+import styles from './index.less';
 
 class Anothercard extends React.Component {
   constructor(props) {

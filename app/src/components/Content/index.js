@@ -1,9 +1,8 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { } from 'antd';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
 
-import styles from './Content.less';
+import styles from './index.less';
 
 class Content extends React.Component {
   state = {
@@ -27,7 +26,6 @@ class Content extends React.Component {
     // const {} = this.props;
     return (
       <div className={styles.topBlog}>
-
         <div className={styles.blogCategory}>
           <em className={styles.em}>
             <a className={styles.a} href="http://lisbeth.premiumcoding.com/wp/category/fashion/" rel="category tag">{this.state.labelA}</a>
@@ -54,12 +52,6 @@ class Content extends React.Component {
             <span className={styles.suDropcap}>T</span>
             {this.state.content}
           </div>
-        </div>
-        <div className={styles.bottom}>
-          <Icon type="smile-o" className={styles.icon} />
-          <Link to="/continueRead" className={styles.link}>
-            Continue reading
-          </Link>
         </div>
       </div>
     );
