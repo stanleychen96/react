@@ -2,37 +2,12 @@ import React from 'react';
 import { Layout, Menu, Icon, Breadcrumb } from 'antd';
 import { Route, Switch } from 'react-router-dom';
 import { Link } from 'dva/router';
-// import { connect } from 'dva';
-// import { ContainerQuery } from 'react-container-query';
 import NotFound from '../routes/404';
 import CommentApp from '../routes/CommentApp';
 import styles from './BasicLayout.less';
 
-
 const { Header, Sider, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
-
-
-// const query = {
-//   'screen-xs': {
-//     maxWidth: 575,
-//   },
-//   'screen-sm': {
-//     minWidth: 576,
-//     maxWidth: 767,
-//   },
-//   'screen-md': {
-//     minWidth: 768,
-//     maxWidth: 991,
-//   },
-//   'screen-lg': {
-//     minWidth: 992,
-//     maxWidth: 1199,
-//   },
-//   'screen-xl': {
-//     minWidth: 1200,
-//   },
-// };
 
 class BasicLayout extends React.PureComponent {
 
@@ -154,9 +129,7 @@ class BasicLayout extends React.PureComponent {
     );
 
     return (
-      // <ContainerQuery query={query}>
       <div>{layout}</div>
-      // </ContainerQuery>
     );
   }
 }

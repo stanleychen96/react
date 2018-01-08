@@ -1,3 +1,4 @@
+@import "~antd/lib/style/themes/default.less";
 .wrapper {
   width: 500px;
   margin: 10px auto;
@@ -6,9 +7,6 @@
   border: 1px solid #f1f1f1;
   padding: 20px;
 }
-
-
-@import "~antd/lib/style/themes/default.less";
 
 body {
   margin: 0;
@@ -94,6 +92,7 @@ body {
 
 /* 评论组件样式 */
 .comment {
+  position: relative;
   display: flex;
   border-bottom: 1px solid #f1f1f1;
   margin-bottom: 10px;
@@ -105,12 +104,40 @@ body {
   flex-shrink: 0;
 }
 
-.comment span {
+.commentUsername {
   color: #00a3cf;
   font-style: italic;
+}
+
+.commentCreatedtime {
+  padding-right: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.comment:hover .commentDelete {
+  color: #00a3cf;
+}
+
+.commentDelete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: transparent;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .comment p {
   margin: 0;
   /*text-indent: 2em;*/
+}
+
+code {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 0px 2px;
 }

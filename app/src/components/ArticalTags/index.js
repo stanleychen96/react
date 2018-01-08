@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.less';
 
-class Tags extends React.Component {
+class ArticalTags extends React.Component {
   render() {
     return (
       <div className={styles.index}>
@@ -11,4 +11,4 @@ class Tags extends React.Component {
   }
 }
 
-export default Tags;
+export default ArticalTags;

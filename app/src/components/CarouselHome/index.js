@@ -1,10 +1,9 @@
 import React from 'react';
 import { Icon } from 'antd';
 import { connect } from 'dva';
-
 import styles from './index.less';
 
-class Anothercard extends React.Component {
+class CarouselHome extends React.Component {
   constructor(props) {
     super(props);
     this.imgArray = [
@@ -43,4 +42,4 @@ class Anothercard extends React.Component {
 
 export default connect(state => ({
   imgcard: state.imgcard,
-}))(Anothercard);
+}))(CarouselHome);

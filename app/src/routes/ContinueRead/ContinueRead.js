@@ -16,4 +16,3 @@ class ContinueRead extends React.Component {
   }
 }
 export default ContinueRead;
-

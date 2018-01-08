@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from '../../components/Comment/CommentApp';
+import Comment from '../../components/Comment/CommentWrap';
 
 class Try extends React.Component {
   render() {

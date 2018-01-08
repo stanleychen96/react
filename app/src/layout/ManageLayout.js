@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'antd';
 import styles from './Manage.less';
 
-
 class ManageLayout extends React.Componment {
 
   rewriteIntroduce = () => {

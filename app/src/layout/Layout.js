@@ -7,10 +7,12 @@ import ContinueRead from '../routes/ContinueRead/ContinueRead';
 import Wrap from '../routes/Wrap/Wrap';
 
 import HeaderBar from '../components/HeaderBar';
-import Top from '../components/Top';
-import Bottom from '../components/Bottom';
-import AnotherCard from '../components/AnotherCard';
-import ImgCard from '../components/ImgCard';
+import PageTop from '../components/PageTop';
+import ContentBottom from '../components/ContentBottom';
+import CarouselRead from '../components/CarouselRead';
+import CarouselHome from '../components/CarouselHome';
+
+import styles from './Layout.less';
 
 const { Header, Content, Footer } = Layout;
 
@@ -31,24 +33,23 @@ class PageLayout extends React.Component {
   render() {
     const layout = (
       <Layout>
-        <Top />
-        <Header style={{ display: 'flex', maxWidth: '1500px', minHeight: '80px', width: '100%', padding: 0 }}>
+        <PageTop />
+        <Header className={styles.header}>
           <HeaderBar />
         </Header>
-        {/* <Imgcard /> */}
         <Switch>
           <Route
             exact
             path="/"
-            component={AnotherCard}
+            component={CarouselHome}
           />
           <Route
             path="/continueRead"
-            component={ImgCard}
+            component={CarouselRead}
           />
         </Switch>
-        <Content style={{ background: '#ffffff' }}>
-          <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop: '25px' }}>
+        <Content className={styles.content}>
+          <div className={styles.contentWrap}>
             <Switch>
               <Route
                 exact
@@ -64,9 +65,9 @@ class PageLayout extends React.Component {
               />
             </Switch>
           </div>
-          <Bottom />
+          <ContentBottom />
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer className={styles.footer}>
           © 2017 copyright PREMIUMCODING // All rights reserved
         </Footer>
       </Layout>
@@ -80,4 +81,3 @@ class PageLayout extends React.Component {
 }
 
 export default PageLayout;
-

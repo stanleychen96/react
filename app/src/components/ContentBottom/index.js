@@ -2,7 +2,7 @@ import React from 'react';
 import { Spin, Popover } from 'antd';
 import styles from './index.less';
 
-class Footer extends React.Component {
+class ContentBottom extends React.Component {
   render() {
     this.state = {
       content: '正在施工',
@@ -19,4 +19,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer;
+export default ContentBottom;

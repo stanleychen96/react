@@ -1,9 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-
 import styles from './index.less';
-
-// const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
 class Instagram extends React.Component {
   constructor(props) {
@@ -14,7 +11,6 @@ class Instagram extends React.Component {
   }
 
   refreshInstagram = () => {
-    console.log('..');
     this.props.dispatch({
       type: 'instagram/fetchImg',
     });

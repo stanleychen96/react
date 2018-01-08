@@ -1,19 +1,19 @@
 import React from 'react';
+import { connect } from 'dva';
 import styles from './index.less';
-
-// const Search = Input.Search;
 
 class Headerbar extends React.Component {
   render() {
+    const { headerbar } = this.props;
     return (
       <div className={styles.root}>
         <div
           className={styles.leftlogo}
         >
           <img
-            src="http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2017/09/lisbeth-logo-new-second.png"
+            src={headerbar.src}
             data-rjs="3"
-            alt="Lisbeth WordPress Blog - Lisbeth WordPress blog"
+            alt={headerbar.alt}
           />
         </div>
       </div>
@@ -21,4 +21,6 @@ class Headerbar extends React.Component {
   }
 }
 
-export default Headerbar;
+export default connect(state => ({
+  headerbar: state.headerbar,
+}))(Headerbar);

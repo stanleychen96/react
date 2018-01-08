@@ -6,7 +6,6 @@ class Introduce extends React.Component {
 
   render() {
     const { introduce } = this.props;
-    console.log('introduce', introduce);
     return (
       <div>
         <div className={styles.mobileBar}>

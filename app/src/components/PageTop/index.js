@@ -2,9 +2,7 @@ import React from 'react';
 import { Icon } from 'antd';
 import styles from './index.less';
 
-// const Search = Input.Search;
-
-class Top extends React.Component {
+class PageTop extends React.Component {
   render() {
     return (
       <div className={styles.topWrapper}>
@@ -13,16 +11,9 @@ class Top extends React.Component {
             <Icon type="github" style={{ fontSize: '32px' }} />
           </a>
         </div>
-        {/* <div className={styles.right}>
-          <Search
-            defaultValue="Search and hit enter"
-            style={{ width: 200 }}
-            className={styles.search}
-          />
-        </div> */}
       </div>
     );
   }
 }
 
-export default Top;
+export default PageTop;

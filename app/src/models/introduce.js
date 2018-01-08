@@ -1,6 +1,5 @@
 
 export default {
-
   namespace: 'introduce',
 
   state: {

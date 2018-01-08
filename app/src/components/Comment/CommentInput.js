@@ -12,21 +12,22 @@ class CommentInput extends React.Component {
       content: '',
       username: '',
     };
+    this._loadUsername = this._loadUsername.bind(this); // eslint-disable-line
   }
 
-  // componentWillMount() {
-  //   this._loadUsername();
-  // }
-
-  // _loadUsername = () => {
-  //   const username = localStorage.getItem('username');
-  //   if (username) {
-  //     this.setState({ username });
-  //   }
-  // }
+  componentWillMount() {
+    this._loadUsername(); // eslint-disable-line
+  }
 
   componentDidMount() {
     this.textarea.focus();
+  }
+
+  _loadUsername = () => {
+    const username = localStorage.getItem('username'); // eslint-disable-line
+    if (username) {
+      this.setState({ username });
+    }
   }
 
   handleUsernameChange = (event) => {
@@ -45,21 +46,25 @@ class CommentInput extends React.Component {
     this.textarea = textarea;
   }
 
-  // _saveUsername = (username) => {
-  //   localStorage.setItem('username', username);
-  // }
+  _saveUsername = (username) => {
+    localStorage.setItem('username', username); // eslint-disable-line
+  }
 
   handleUsernameBlur = (event) => {
-    this.saveUsername(event.target.value);
+    this._saveUsername(event.target.value); // eslint-disable-line
   }
 
   handleSubmit = () => {
     if (this.props.onSubmit) {
-      const { username, content } = this.state;
-      this.props.onSubmit({ username, content });
+      this.props.onSubmit({
+        username: this.state.username,
+        content: this.state.content,
+        createdTime: +new Date(),
+      });
     }
     this.setState({ content: '' });
   }
+
   render() {
     return (
       <div className={styles.commentInput}>

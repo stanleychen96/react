@@ -8,7 +8,6 @@ import styles from './Wrap.less';
 class Wrap extends React.Component {
   render() {
     const { content } = this.props;
-    console.log('wrap', content);
 
     return (
       <div>

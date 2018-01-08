@@ -7,7 +7,7 @@ import styles from './index.less';
 const { Element, Arrow, Thumb } = BannerAnim;
 const BgElement = Element.BgElement;
 
-class Imgcard extends React.Component {
+class CarouselRead extends React.Component {
   constructor(props) {
     super(props);
     this.imgArray = [
@@ -81,7 +81,6 @@ class Imgcard extends React.Component {
 
   render() {
     const intArray = this.getNextPrevNumber();
-    console.log('....', `url(${this.imgArray[1]})`);
     const thumbChildren = this.imgArray.map((img, i) =>
       <span key={i}><i style={{ backgroundImage: `url(${img})` }} /></span>,
         );
@@ -131,7 +130,6 @@ class Imgcard extends React.Component {
           onMouseLeave={this.prevLeave}
           animation={{ left: this.state.prevEnter ? 0 : -120 }}
         >
-          {/* <div className={styles.arrow}></div> */}
           <TweenOneGroup
             enter={{ opacity: 0, type: 'from' }}
             leave={{ opacity: 0 }}
@@ -147,7 +145,6 @@ class Imgcard extends React.Component {
           onMouseLeave={this.nextLeave}
           animation={{ right: this.state.nextEnter ? 0 : -120 }}
         >
-          {/* <div className={styles.arrow}></div> */}
           <TweenOneGroup
             enter={{ opacity: 0, type: 'from' }}
             leave={{ opacity: 0 }}
@@ -169,4 +166,4 @@ class Imgcard extends React.Component {
   }
 }
 
-export default Imgcard;
+export default CarouselRead;
