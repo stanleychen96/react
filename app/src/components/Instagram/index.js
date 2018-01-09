@@ -1,42 +1,33 @@
 import React from 'react';
-import { connect } from 'dva';
+import PropTypes from 'prop-types';
 import styles from './index.less';
 
 class Instagram extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      refresh: 'http://lisbeth.premiumcoding.com/wp/wp-content/uploads/2016/10/lisbeth-demo1-16.3.jpg',
-    };
+  static defaultProps = {
+    alt: '',
+    src: '',
+    key: '',
+    handleInstagram: () => {},
   }
 
-  refreshInstagram = () => {
-    this.props.dispatch({
-      type: 'instagram/fetchImg',
-    });
+  static PropTypes = {
+    alt: PropTypes.string,
+    src: PropTypes.string,
+    key: PropTypes.string,
+    handleInstagram: PropTypes.func,
   }
 
   render() {
-    const { instagram } = this.props;
+    const { alt, src, key, handleInstagram } = this.props;
 
     return (
       <div className={styles.root}>
         <div className={styles.wrap}>
-          {
-            instagram.imgSource.map(item =>
-              (
-                <img
-                  alt={item.alt}
-                  key={item.key}
-                  src={item.src}
-                />
-              ),
-            )
-          }
           <img
-            src={this.state.refresh}
-            alt="refresh"
-            onClick={this.refreshInstagram}
+            alt={alt}
+            key={key}
+            src={src}
+            onClick={handleInstagram}
           />
         </div>
       </div>
@@ -44,6 +35,4 @@ class Instagram extends React.Component {
   }
 }
 
-export default connect(state => ({
-  instagram: state.instagram,
-}))(Instagram);
+export default Instagram;

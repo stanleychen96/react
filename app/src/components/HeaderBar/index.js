@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import styles from './index.less';
 
 class Headerbar extends React.Component {
+
   render() {
     const { headerbar } = this.props;
     return (

@@ -47,3 +47,50 @@
     }
   }
 }
+
+.root {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .root {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+  
+.wrap {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 50%;
+    transition: all 2s;
+    -webkit-transition: all .5s; 
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+.mobileWidget {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.sideImg {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    padding: 0 16%;
+    width: 100%;
+  }
+}

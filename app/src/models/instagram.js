@@ -14,7 +14,7 @@ export default {
     * fetchImg(_, { put }) {  // eslint-disable-line
       // const img = yield call();
       yield put({
-        type: 'saveInstagram',
+        type: 'fetchImg',
         payload: [],
       });
       console.log('payload');
@@ -22,7 +22,7 @@ export default {
   },
 
   reducers: {
-    saveInstagram(state, action) {
+    fetchImg(state, action) {
       return {
         ...state,
         imgSource: action.payload,
