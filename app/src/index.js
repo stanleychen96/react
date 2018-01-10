@@ -16,6 +16,7 @@ app.model(require('./models/introduce'));
 app.model(require('./models/layout'));
 app.model(require('./models/imgcard'));
 app.model(require('./models/headerbar'));
+app.model(require('./models/continueread'));
 
 // 4. Router
 app.router(require('./router'));

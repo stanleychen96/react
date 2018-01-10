@@ -1,20 +1,25 @@
 import React from 'react';
+import { connect } from 'dva';
 import Content from '../../components/Content';
 import ReturnTap from '../../components/Content/ReturnTap';
 
-class ContinueRead extends React.Component {
-  state = {
-    item: {},
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.',
-  };
 
-  // componentWillMount() {
-  //   // console.log(this.props.location.state);
-  //   // const item = artical.contentInfo.filter(e => e.id === this.props.state.id);
-  //   this.setState({
-  //     item: item[0],
-  //   });
-  // }
+class ContinueRead extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      article: this.props.article,
+      item: [],
+    };
+  }
+  componentWillMount() {
+    const item = this.state.article.contentInfo.filter(e => e.id === this.props.location.state.id);
+    console.log(item, '1'); // eslint-disable-line
+    this.setState({
+      item: item[0],
+    });
+    console.log(this.state.item, '2'); // eslint-disable-line
+  }
 
   render() {
     return (
@@ -25,4 +30,6 @@ class ContinueRead extends React.Component {
     );
   }
 }
-export default ContinueRead;
+export default connect(state => ({
+  article: state.continueread,
+}))(ContinueRead);

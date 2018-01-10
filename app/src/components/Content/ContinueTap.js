@@ -1,35 +1,15 @@
 import React from 'react';
 import { Icon } from 'antd';
-// import PropTypes from 'prop-types';
 import { Link } from 'dva/router';
 import { Route } from 'react-router-dom';
 import styles from './index.less';
 
 class ContinueTap extends React.Component {
-  // static defaultProps = {
-  //   count: '',
-  // }
 
-  // static PropTypes = {
-  //   count: PropTypes.string,
-  // }
-
-  // componentWillMount() {
-  //   this.props.dispatch({
-  //     type: 'content/fetchContent',
-  //   });
-  // }
-
-  // handleSubmit = () => {
-  //   if (this.props.onSubmit) {
-  //     const { count } = this.props;
-  //     this.props.onSubmit({ count });
-  //     console.log('handleSubmit', count);
-  //   }
-  // }
-
+  handleSubmit = () => {
+    // console.log(item, 'hanadleSubmit');
+  }
   render() {
-    // const { } = this.props;
     return (
       <div className={styles.bottom}>
         <Icon
@@ -43,8 +23,9 @@ class ContinueTap extends React.Component {
               to={{
                 pathname: '/continueRead',
                 state: {
-                  id: 1,
+                  id: this.props.articleId,
                 },
+                search: `?id=${this.props.articleId}`,
               }}
               className={styles.link}
               onClick={this.handleSubmit}

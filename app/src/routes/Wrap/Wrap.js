@@ -7,13 +7,14 @@ import styles from './Wrap.less';
 
 class Wrap extends React.Component {
   render() {
-    const { artical } = this.props;
-    console.log(artical.contentInfo, 'artical.contentInfo');
+    const { article } = this.props;
+    console.log(this.props, 'Wrap.props');
+    console.log(article.contentInfo, 'article.contentInfo');
     return (
       <div className={styles.flex}>
         <div>
           {
-            artical.contentInfo.map(item =>
+            article.contentInfo.map(item =>
               (
                 <div>
                   <Content
@@ -25,7 +26,7 @@ class Wrap extends React.Component {
                     words={item.words}
                     firstWord={item.firstWord}
                   />
-                  <ContinueTap aticleId={item.id} />
+                  <ContinueTap articleId={item.id} />
                 </div>
               ),
             )
@@ -38,5 +39,5 @@ class Wrap extends React.Component {
 }
 
 export default connect(state => ({
-  artical: state.content,
+  article: state.content,
 }))(Wrap);
