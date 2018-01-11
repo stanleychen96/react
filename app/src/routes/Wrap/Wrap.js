@@ -5,18 +5,23 @@ import ContinueTap from '../../components/Content/ContinueTap';
 import RightWrap from '../../components/RightWrap/';
 import styles from './Wrap.less';
 
+
 class Wrap extends React.Component {
+  continueTapFetchContentInfo = () => {
+    this.props.dispatch({
+      type: 'content/fetchContent',
+      payload: '1',
+    });
+  }
   render() {
     const { article } = this.props;
-    console.log(this.props, 'Wrap.props');
-    console.log(article.contentInfo, 'article.contentInfo');
     return (
       <div className={styles.flex}>
         <div>
           {
             article.contentInfo.map(item =>
               (
-                <div>
+                <div key={item.id}>
                   <Content
                     labelA={item.labelA}
                     labelB={item.labelB}
@@ -25,8 +30,12 @@ class Wrap extends React.Component {
                     commentsNum={item.commentsNum}
                     words={item.words}
                     firstWord={item.firstWord}
+                    contentImg={item.src}
                   />
-                  <ContinueTap articleId={item.id} />
+                  <ContinueTap
+                    handleSubmit={this.continueTapFetchContentInfo}
+                    articleId={item.id}
+                  />
                 </div>
               ),
             )

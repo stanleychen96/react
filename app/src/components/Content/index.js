@@ -33,7 +33,6 @@ class Content extends React.Component {
     const {
       labelA, labelB, title, author, commentsNum, firstWord, words, contentImg,
     } = this.props;
-    // console.log(this.props, 'content.this.props');
     return (
       <div>
         <div className={styles.topBlog}>

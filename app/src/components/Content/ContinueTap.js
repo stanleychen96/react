@@ -1,15 +1,20 @@
 import React from 'react';
 import { Icon } from 'antd';
+import PropsTypes from 'prop-types';
 import { Link } from 'dva/router';
 import { Route } from 'react-router-dom';
 import styles from './index.less';
 
 class ContinueTap extends React.Component {
-
-  handleSubmit = () => {
-    // console.log(item, 'hanadleSubmit');
+  static defaultprops = {
+    handleSubmit: () => {},
   }
+  static propsTypes = {
+    handleSubmit: PropsTypes.func,
+  }
+
   render() {
+    const { handleSubmit } = this.props;
     return (
       <div className={styles.bottom}>
         <Icon
@@ -28,7 +33,7 @@ class ContinueTap extends React.Component {
                 search: `?id=${this.props.articleId}`,
               }}
               className={styles.link}
-              onClick={this.handleSubmit}
+              onClick={handleSubmit}
             >
               Continue reading
             </Link>

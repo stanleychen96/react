@@ -17,14 +17,12 @@ class Rightwrap extends React.Component {
           <div className={styles.subcontent}>
             <h3>About me</h3>
             <div className={styles.mobileBar}>
-              <p>
-                <img src={introduce.src} alt="'up'" className={styles.sideImg} />
-                <div style={{ fontSize: '15px', lineHeight: '28px', paddingTop: '10px', textAlign: 'left' }}>
-                  <b>Hello, my name is </b>
-                  <b>{introduce.name}. </b>
-                  {introduce.myWord};
-                </div>
-              </p>
+              <img src={introduce.src} alt="'up'" className={styles.sideImg} />
+              <div style={{ fontSize: '15px', lineHeight: '28px', paddingTop: '10px', textAlign: 'left' }}>
+                <b>Hello, my name is </b>
+                <b>{introduce.name}. </b>
+                {introduce.myWord};
+              </div>
             </div>
           </div>
         </div>

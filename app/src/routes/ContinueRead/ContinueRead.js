@@ -18,13 +18,23 @@ class ContinueRead extends React.Component {
     this.setState({
       item: item[0],
     });
-    console.log(this.state.item, '2'); // eslint-disable-line
   }
 
   render() {
+    console.log(this.state.item, '2'); // eslint-disable-line
+
     return (
       <div>
-        <Content />
+        <Content
+          labelA={this.state.labelA}
+          labelB={this.state.labelB}
+          title={this.state.title}
+          src={this.state.src}
+          words={this.state.words}
+          firstWord={this.state.fitstWord}
+          author={this.state.author}
+          commentsNum={this.state.commentsNum}
+        />
         <ReturnTap />
       </div>
     );

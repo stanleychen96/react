@@ -6,6 +6,7 @@ export default {
     contentInfo: [
       {
         id: 0,
+        key: 'index0',
         labelA: 'LIFESTYLE',
         labelB: 'FASHION',
         title: 'Best coffee in town',
@@ -17,6 +18,7 @@ export default {
       },
       {
         id: 1,
+        key: 'index1',
         labelA: 'LIFESTYLE',
         labelB: 'FASHION',
         title: 'Best coffee in townq',
@@ -30,11 +32,11 @@ export default {
   },
 
   effects: {
-    * fetchContent(index, { put }) {
+    * fetchContent(_, { put }) {
       // const content = yield call();
       yield put({
         type: 'fetchContentInfo',
-        payload: this.state.contentInfo[index],
+        payload: this.state.contentInfo[_.payload],
       });
     },
   },
