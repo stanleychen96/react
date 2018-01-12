@@ -20,7 +20,6 @@ export default {
         type: 'fetchImg',
         payload: [],
       });
-      console.log('payload');
     },
   },
 

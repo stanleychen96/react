@@ -1,5 +1,5 @@
 /**
- * 2017-1-09 Stanley Chen
+ * 2018-1-09 StanleyChen
  */
 
 import React from 'react';

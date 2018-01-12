@@ -1,5 +1,5 @@
 /**
- * 2018-01-01 StanleyChen
+ * 2017-12-23 StanleyChen
  */
 
 const config = {

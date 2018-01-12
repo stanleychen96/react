@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import SingleArticle from './SingleArticle';
+import SingleArticle from './index';
 
 class ForArticle extends React.Component {
   render() {

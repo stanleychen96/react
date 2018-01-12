@@ -7,7 +7,6 @@ import { Layout, Menu, Icon } from 'antd';
 import { Switch, Route, Link } from 'dva/router';
 import Editor from '../routes/Article/Editor';
 import ForArticle from '../routes/Management/ForArticle';
-// import marked from 'marked';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;

@@ -1,3 +1,7 @@
+/**
+ * 2018-01-12 StanleyChen
+ */
+
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import LoginLayout from './layouts/LoginLayout';

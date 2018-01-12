@@ -18,7 +18,6 @@ export default {
         type: 'saveInstagram',
         payload: [],
       });
-      console.log('payload');
     },
   },
 

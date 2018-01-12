@@ -1,3 +1,7 @@
+/**
+ * 2018-01-12 StanleyChen
+ */
+
 import fetch from 'dva/fetch';
 
 function parseJSON(response) {

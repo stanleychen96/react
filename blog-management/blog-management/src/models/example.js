@@ -1,3 +1,15 @@
+/**
+ * 2018-01-12 StanleyChen
+ */
+
+import request from '../utils/request';
+
+export function query(data) {
+  return request('/api/users', {
+    method: 'get', // post
+    body: JSON.stringify(data),
+  });
+}
 
 export default {
 
