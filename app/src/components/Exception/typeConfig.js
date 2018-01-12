@@ -1,3 +1,7 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 const config = {
   403: {
     img: 'https://gw.alipayobjects.com/zos/rmsportal/wZcnGqRDyhPOEYFcZDnb.svg',

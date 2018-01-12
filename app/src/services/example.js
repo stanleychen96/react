@@ -1,3 +1,7 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import request from '../utils/request';
 
 export function query(data) {

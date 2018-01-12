@@ -1,3 +1,7 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 export default {
   namespace: 'layout',
 

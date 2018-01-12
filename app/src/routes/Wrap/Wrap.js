@@ -1,10 +1,13 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import React from 'react';
 import { connect } from 'dva';
 import Content from '../../components/Content';
 import ContinueTap from '../../components/Content/ContinueTap';
 import RightWrap from '../../components/RightWrap/';
 import styles from './Wrap.less';
-
 
 class Wrap extends React.Component {
   continueTapFetchContentInfo = () => {

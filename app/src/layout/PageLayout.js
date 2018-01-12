@@ -1,3 +1,7 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import React from 'react';
 import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
@@ -12,23 +16,11 @@ import ContentBottom from '../components/ContentBottom';
 import CarouselRead from '../components/CarouselRead';
 import CarouselHome from '../components/CarouselHome';
 
-import styles from './Layout.less';
+import styles from './PageLayout.less';
 
 const { Header, Content, Footer } = Layout;
 
 class PageLayout extends React.Component {
-
-  // lastImgCard = () => {
-  //   this.props.dispatch({
-  //     type: 'layout/lastImgCard',
-  //   });
-  // }
-
-  // nextImgCard = () => {
-  //   this.props.dispatch({
-  //     type: 'layout/nextImgCard',
-  //   });
-  // };
 
   render() {
     const layout = (

@@ -1,17 +1,16 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
-import PageLayout from './layout/Layout';
-import Try from './routes/Try/try';
+import PageLayout from './layout/PageLayout';
 
 function RouterConfig({ history }) {
-  // const route = 'second';
-
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/try" component={Try} />
         <Route path="/" component={PageLayout} />
-        {/* <Route path="/" render={props => <BasicLayout {...route} {...props} />} /> */}
       </Switch>
     </Router>
   );

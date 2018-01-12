@@ -1,3 +1,7 @@
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import React from 'react';
 import { Icon } from 'antd';
 import { Link } from 'dva/router';

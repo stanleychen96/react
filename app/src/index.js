@@ -1,4 +1,7 @@
-// 版权;eslint; 取名字;留白;state位置;style替换className;版本升级;title;
+/**
+ * 2018-01-01 StanleyChen
+ */
+
 import dva from 'dva';
 import './index.css';
 
@@ -9,7 +12,6 @@ const app = dva();
 // app.use({});
 
 // 3. Model
-// 整理
 app.model(require('./models/instagram'));
 app.model(require('./models/content'));
 app.model(require('./models/introduce'));
