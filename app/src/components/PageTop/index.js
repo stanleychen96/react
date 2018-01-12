@@ -12,7 +12,7 @@ class PageTop extends React.Component {
       <div className={styles.topWrapper}>
         <div className={styles.left}>
           <a href="https://github/stanleychen96.com">
-            <Icon type="github" style={{ fontSize: '32px' }} />
+            <Icon type="github" className={styles.icon} />
           </a>
         </div>
       </div>

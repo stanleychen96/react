@@ -4,6 +4,11 @@
 
 import request from '../utils/request';
 
-export function query() {
-  return request('/api/users');
-}
+export async function AdminLogin(params) {
+    return request({
+      url: '/adminLogin',
+      method: 'post',
+      data: params,
+    });
+    console.log('params.....',params); // eslint-disable-line
+  }

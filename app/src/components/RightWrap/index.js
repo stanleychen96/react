@@ -16,13 +16,13 @@ class Rightwrap extends React.Component {
   render() {
     const { instagram, introduce } = this.props;
     return (
-      <div style={{ maxWidth: '1000px' }}>
+      <div className={styles.root}>
         <div className={styles.widget}>
           <div className={styles.subcontent}>
             <h3>About me</h3>
-            <div className={styles.mobileBar}>
+            <div>
               <img src={introduce.src} alt="'up'" className={styles.sideImg} />
-              <div style={{ fontSize: '15px', lineHeight: '28px', paddingTop: '10px', textAlign: 'left' }}>
+              <div className={styles.introduceWrods}>
                 <b>Hello, my name is </b>
                 <b>{introduce.name}. </b>
                 {introduce.myWord};
@@ -33,8 +33,8 @@ class Rightwrap extends React.Component {
         <div className={styles.widget}>
           <div className={styles.subcontent}>
             <h3>Instagram</h3>
-            <div className={styles.root}>
-              <div className={styles.wrap}>
+            <div className={styles.instagramRoot}>
+              <div className={styles.instagramWrap}>
                 {
                   instagram.map(item =>
                     (

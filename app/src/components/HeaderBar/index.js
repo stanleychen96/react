@@ -13,7 +13,7 @@ class Headerbar extends React.Component {
     return (
       <div className={styles.root}>
         <div
-          className={styles.leftlogo}
+          className={styles.leftLogo}
         >
           <img
             src={headerbar.src}

@@ -29,13 +29,15 @@ class Content extends React.Component {
     words: PropTypes.string,
     count: PropTypes.number,
   }
+
   render() {
     const {
       labelA, labelB, title, author, commentsNum, firstWord, words, contentImg,
     } = this.props;
+
     return (
       <div>
-        <div className={styles.topBlog}>
+        <div className={styles.rootWrap}>
           <div className={styles.blogCategory}>
             <em className={styles.em}>
               <a className={styles.a} href="http://lisbeth.premiumcoding.com/wp/category/fashion/" rel="category tag">{labelA}</a>
@@ -51,13 +53,13 @@ class Content extends React.Component {
                 height="auto"
               />
             </div>
-            <div className={styles.metaline}>
+            <div className={styles.metaLine}>
               <div >September 14, 2017</div>•
               <div>by {author}</div>•
               <div>{commentsNum} Comments</div>
             </div>
           </div>
-          <div style={{ display: 'flex' }}>
+          <div className={styles.wordsWrap}>
             <div className={styles.content}>
               <span className={styles.suDropcap}>{firstWord}</span>
               {words}

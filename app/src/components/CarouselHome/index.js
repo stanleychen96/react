@@ -24,7 +24,7 @@ class CarouselHome extends React.Component {
   render() {
     const { imgcard } = this.props;
     return (
-      <div className={styles.mainImg}>
+      <div className={styles.root}>
         <div className={styles.imgCard}>
           {imgcard.imgCardDiscrible}
           <div className={styles.cardController}>
