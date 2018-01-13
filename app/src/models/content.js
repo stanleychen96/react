@@ -39,7 +39,7 @@ export default {
       // const content = yield call();
       yield put({
         type: 'fetchContentInfo',
-        payload: this.state.contentInfo[_.payload],
+        payload: '',
       });
     },
   },

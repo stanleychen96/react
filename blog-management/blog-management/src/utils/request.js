@@ -1,15 +1,12 @@
 /**
  * 2018-01-12 StanleyChen
  */
+
 import axios from 'axios'
 import qs from 'qs'
 import HttpStatus from 'http-status-codes'
-// import {
-//   baseURL,
-//   requestTimeOut
-// }                 from './config'
 
-axios.defaults.baseURL = "http://10.0.0.48:8080"; //change
+axios.defaults.baseURL = "http://192.168.0.120:8080";
 axios.defaults.timeout = 10000;
 
 const fetch = (options) => {
@@ -39,14 +36,12 @@ const fetch = (options) => {
 
 export default function request (options) {
   return fetch(options).then((response) => {
-    console.log('options: ', options, 'response: ', response);
     if (response.status === HttpStatus.OK) {
       return response.data
     }
-    throw { response }
+    throw { response } // eslint-disable-line
   }).catch((error) => {
     const { response } = error;
-    console.log('request error: ', error);
     let message, status
     if (response) {
       status = response.status
@@ -56,7 +51,7 @@ export default function request (options) {
       status = 600
       message = 'Network Error'
     }
-    throw { status, message }
+    throw { status, message } // eslint-disable-line
   })
 }
 
