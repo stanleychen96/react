@@ -1,7 +1,8 @@
 /**
- * 2018-01-12 StanleyChen
+ * 2018-1-11 StanleyChen
  */
 
+import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import LoginLayout from './layouts/LoginLayout';
 import BasicLayout from './layouts/BasicLayout';
@@ -10,8 +11,8 @@ function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/" component={LoginLayout} />
-        <Route path="/editor" component={BasicLayout}/>
+        <Route path="/login" component={LoginLayout} />
+        <Route exact path="/main" component={BasicLayout}/>
       </Switch>
     </Router>
   );

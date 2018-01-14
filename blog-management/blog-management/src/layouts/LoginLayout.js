@@ -6,13 +6,13 @@ import React from 'react';
 import { connect } from 'dva';
 import { Form, Input, Icon, Button, Checkbox } from 'antd';
 import styles from './LoginLayout.less';
-// import { createAdmin } from '../services/login';
 
 const FormItem = Form.Item;
 
 class LoginLayout extends React.Component {
 
   handleSubmit = () => {
+    console.log(this.props.form, 'form');
     this.props.form.validateFields((err, values) => {
       if(!err) {
         this.props.dispatch({
@@ -37,9 +37,9 @@ class LoginLayout extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className={styles.login_form}>
+      <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
         <FormItem>
-          {getFieldDecorator('username', {
+          {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
           })(
             <Input
@@ -66,7 +66,7 @@ class LoginLayout extends React.Component {
           })(
             <Checkbox>Remember me</Checkbox>
           )}
-          <Button type="primary" htmlType="submit" className={styles.login_form_button}>
+          <Button type="primary" htmlType="submit" className={styles.loginFormButton}>
             Log in
           </Button>
         </FormItem>

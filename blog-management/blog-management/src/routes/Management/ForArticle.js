@@ -16,4 +16,3 @@ class ForArticle extends React.Component {
 }
 
 export default ForArticle;
-

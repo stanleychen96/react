@@ -17,12 +17,10 @@ export default {
         name: payload.payload.username,
         password: payload.payload.password,
       }
-      console.log(payload.payload.username, 'username');
-      console.log(payload.payload.password, 'password');
       const result = yield call(createAdmin, params);
       console.log('result.status', result.status)
-      if (result.status === 'success') {
-        yield put(routerRedux.push('/main'))
+      if (result.status === 'Succeed') {
+        yield put(routerRedux.push('/editor'))
       } else if (result.status === 'not found user'){
         message.error('用户名不存在！')
       } else {

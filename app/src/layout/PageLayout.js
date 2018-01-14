@@ -60,7 +60,7 @@ class PageLayout extends React.Component {
           <ContentBottom />
         </Content>
         <Footer className={styles.footer}>
-          © 2017 copyright PREMIUMCODING // All rights reserved
+          © 2018 copyright by StanleyChen // All rights reserved
         </Footer>
       </Layout>
     );

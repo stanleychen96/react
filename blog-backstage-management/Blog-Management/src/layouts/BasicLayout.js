@@ -1,12 +1,9 @@
-/**
- * 2018-1-11 StanleyChen
- */
 
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { Switch, Route, Link } from 'dva/router';
-import Editor from '../routes/Article/Editor';
-import ForArticle from '../routes/Management/ForArticle';
+import Editor from '../routes/Article';
+import ForArticle from '../routes/Management';
 import styles from './BasicLayout.less';
 
 const { SubMenu } = Menu;

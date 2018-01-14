@@ -1,26 +1,20 @@
 /**
- * 2018-1-11 Stanley Chen
+ * 2018-1-10 StanleyChen
  */
 
 import React from 'react';
-import { Tag, Button, Card } from 'antd';
+import { Button, Card } from 'antd';
 import styles from './index.less';
 
-class SingleArticle extends React.Component {
+class Manager extends React.Component {
   render() {
     return(
       <div style={{ margin: '10px'}}>
         <Card>
           <div>
-            <div>
-              <h2>........................</h2>
-              <div className={styles.tag}>
-                <Tag color="#2db7f5">标签</Tag>
-                <Tag color="#87d068">标签</Tag>
-              </div>
-            </div>
+            <h2>.................</h2>
             <hr />
-            <p>.................</p>
+            <p>................</p>
           </div>
           <div className={styles.tag}>
             <div>
@@ -36,4 +30,4 @@ class SingleArticle extends React.Component {
   }
 }
 
-export default SingleArticle;
+export default Manager;
