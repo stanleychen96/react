@@ -13,9 +13,9 @@ function RouterConfig({ history }) {
       <Switch>
         <Route path="/login" component={LoginLayout} />
         <Route exact path="/root" component={BasicLayout}/>
-        {/* <Route exact path="/root/editor" component={BasicLayout}/>
+        <Route exact path="/root/editor" component={BasicLayout}/>
         <Route exact path="/root/manager" component={BasicLayout}/>
-        <Route exact path="/asc" component={BasicLayout}/> */}
+        <Route exact path="/asc" component={BasicLayout}/>
       </Switch>
     </Router>
   );
