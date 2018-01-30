@@ -11,6 +11,14 @@ export async function AdminLogin(params) {
   });
 }
 
+export async function createAdmin(params) {
+  return request({
+    url: '/admin/create',
+    method: 'post',
+    data: params,
+  });
+}
+
 // import axios from 'axios';
 
 // export async function AdminLogin(payload) {
