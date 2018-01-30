@@ -58,7 +58,7 @@ class Comment extends Component {
           onClick={this.handleDeleteComment}
           className={styles.commentDelete}
         >
-          删除
+          删除此条
         </span>
       </div>
     );
